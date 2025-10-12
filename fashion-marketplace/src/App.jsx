@@ -1,7 +1,13 @@
-export default function App() {
+import React from "react";
+import AppRoutes from "./routes/AppRoutes";
+import { CartProvider } from "./context/CartContext";
+
+const App = () => {
   return (
-    <>
-      <h1>Hi there</h1>
-    </>
+    <CartProvider>
+      <AppRoutes />
+    </CartProvider>
   );
-}
+};
+
+export default App;
